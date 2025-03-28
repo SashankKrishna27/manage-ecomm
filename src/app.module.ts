@@ -10,6 +10,7 @@ import { CategoryModule } from './category/category.module';
     ConfigModule.forRoot({
       isGlobal: true,
     }),
+    // configuration for mongoose to use mongodb.
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => ({
